@@ -5,24 +5,7 @@ async function main() {
     }
 
     let state: GameState = {
-        players: {
-            // Brad: {
-            //     name: "Brad",
-            //     scores: {
-            //         // 3: 4,
-            //         // 4: 0,
-            //         // 5: 0,
-            //     },
-            // },
-            // Jenny: {
-            //     name: "Jenny",
-            //     scores: {
-            //         // 3: 0,
-            //         // 4: 0,
-            //         // 5: 7,
-            //     },
-            // },
-        },
+        players: {},
     };
 
     const root = (ReactDOM as any).createRoot(main);
@@ -97,11 +80,10 @@ function Body({ players, dealerShift, onEvent }: { players: Player[], dealerShif
                 {...players.map(p => {
                     return <td>
                         <input
-                            type="text"
+                            type="number"
                             value={p.scores[round] ?? ""}
                             onChange={e => {
                                 const v = parseInt(e.target.value);
-
                                 onEvent(setPlayerScoreEvent(p.name, round, isNaN(v) ? undefined : v));
                             }}
                         ></input>

@@ -5,24 +5,7 @@ async function main() {
         throw new Error("Could not find 'main' element :(");
     }
     let state = {
-        players: {
-        // Brad: {
-        //     name: "Brad",
-        //     scores: {
-        //         // 3: 4,
-        //         // 4: 0,
-        //         // 5: 0,
-        //     },
-        // },
-        // Jenny: {
-        //     name: "Jenny",
-        //     scores: {
-        //         // 3: 0,
-        //         // 4: 0,
-        //         // 5: 7,
-        //     },
-        // },
-        },
+        players: {},
     };
     const root = ReactDOM.createRoot(main);
     while (true) {
@@ -82,7 +65,7 @@ function Body({ players, dealerShift, onEvent }) {
             ...players.map(p => {
                 var _a;
                 return React.createElement("td", null,
-                    React.createElement("input", { type: "text", value: (_a = p.scores[round]) !== null && _a !== void 0 ? _a : "", onChange: e => {
+                    React.createElement("input", { type: "number", value: (_a = p.scores[round]) !== null && _a !== void 0 ? _a : "", onChange: e => {
                             const v = parseInt(e.target.value);
                             onEvent(setPlayerScoreEvent(p.name, round, isNaN(v) ? undefined : v));
                         } }));
