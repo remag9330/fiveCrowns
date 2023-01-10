@@ -1,5 +1,7 @@
 main {
-    font-size: 1.2em;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
 
     display: flex;
     flex-direction: column;
@@ -8,16 +10,22 @@ main {
 }
 
 .addPlayer {
+    width: 90%;
     display: flex;
+    gap: 1em;
     margin-bottom: 2em;
 }
 
 .addPlayer input {
+    font-size: 1em;
+
     flex: 1 0 auto;
 }
 
 .shiftDealer {
+    width: 90%;
     display: flex;
+    gap: 1em;
 }
 
 .shiftDealer span,
@@ -27,8 +35,6 @@ main {
 }
 
 .scoreTable {
-    width: 100%;
-    max-width: 600px;
     table-layout: auto;
 }
 
@@ -37,6 +43,8 @@ main {
 }
 
 .scoreTable tr input {
+    font-size: 1em;
+
     width: 100%;
     text-align: center;
 }
