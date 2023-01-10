@@ -17,7 +17,7 @@ main {
 }
 
 .addPlayer input {
-    font-size: 1em;
+    font-size: 1.2em;
 
     flex: 1 0 auto;
 }
@@ -43,7 +43,7 @@ main {
 }
 
 .scoreTable tr input {
-    font-size: 1em;
+    font-size: 1.2em;
 
     width: 100%;
     text-align: center;
