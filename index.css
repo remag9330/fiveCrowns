@@ -1,0 +1,49 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addPlayer {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.addPlayer input {
+    flex: 1 0 auto;
+}
+
+.shiftDealer {
+    display: flex;
+}
+
+.shiftDealer span,
+.shiftDealer button {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.scoreTable {
+    width: 100%;
+    max-width: 600px;
+    table-layout: auto;
+}
+
+.scoreTable td {
+    padding: 0 2%;
+}
+
+.scoreTable tr input {
+    width: 100%;
+    text-align: center;
+}
+
+.scoreTable tfoot {
+    text-align: center;
+    font-weight: bold;
+}
+
+th sub {
+    font-weight: normal;
+}
